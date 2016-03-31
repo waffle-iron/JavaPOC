@@ -10,19 +10,18 @@ public class App {
 		//Menu m = new Menu();
 		//m.menuInicial();
 		Date newdate = new Date();
-		SimpleDateFormat dateformat2 = new SimpleDateFormat("dd/M/yyy");
-				        String strdate2 = "04/10/1996";
+		SimpleDateFormat dateformat2 = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+				        String strdate2 = "02-04-2013 11:35:42";
 		     try {
 		          newdate = dateformat2.parse(strdate2);
-		          System.out.println(newdate.toString());
+		          System.out.println(newdate);
 		      } catch (ParseException e) {
 		          e.printStackTrace();
 		      }
 
-		System.out.println("Data is: "+dateformat2.format(newdate));
-
-		Paciente p = new Paciente("Rafael", "111111", dateformat2.format(newdate));
-		System.out.println(p.getData());
+		
+		Paciente p = new Paciente("Rafael", "111111", newdate);
+		
 	}
 
 }

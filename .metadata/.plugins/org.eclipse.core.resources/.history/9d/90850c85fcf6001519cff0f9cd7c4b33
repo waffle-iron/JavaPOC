@@ -5,9 +5,9 @@ public class Consulta {
 	private Paciente paciente;
 	private Medicamento medicamento;
 	private Date dataConsulta;
+	private String prontuario;
 	
-	
-	Consulta(Paciente paciente, Medicamento medicamento, Date dataConsulta){
+	Consulta(Paciente paciente, Medicamento medicamento, Date dataConsulta, String prontuario){
 		this.paciente = paciente;
 		this.medicamento = medicamento;
 		this.dataConsulta = dataConsulta;
@@ -18,7 +18,7 @@ public class Consulta {
 		mensagem += "Dia: " + dataConsulta.toString();
 		mensagem += "\nPaciente " + paciente.getNome();
 		mensagem += "\nMedicamento: " + medicamento.getNome();
-		mensagem += "Prontuário: " + paciente.getProntuario();
+		mensagem += "Prontuário: " + prontuario;
 		return mensagem;
 	}
 }

@@ -21,7 +21,7 @@ public class App {
 
 		System.out.println("Data is: "+dateformat2.format(newdate));
 
-		Paciente p = new Paciente("Rafael", "111111", dateformat2.format(newdate));
+		Paciente p = new Paciente("Rafael", "111111", newdate);
 		System.out.println(p.getData());
 	}
 

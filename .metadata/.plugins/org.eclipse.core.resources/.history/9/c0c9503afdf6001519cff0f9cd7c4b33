@@ -37,7 +37,7 @@ public class Menu {
 					menuCadastrarConsulta();
 					break;
 				case 4:
-					//menuConsultas();
+					menuConsultas();
 					break;
 			}
 			
@@ -74,7 +74,7 @@ public class Menu {
 				System.out.println("RG:");
 				String rg = teclado.next();
 				
-				listaPaciente.add(new Paciente(nome,rg,dataNasc.format(d)));
+				listaPaciente.add(new Paciente(nome,rg,d));
 			}
 		
 		}

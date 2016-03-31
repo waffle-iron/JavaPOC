@@ -9,11 +9,6 @@ public class CadastraMedicamento {
 	}
 	
 	public int size(){
-		if(lista.size() == 0){
-			return 0;
-		}else{
-			return lista.size();
-		}
-		
+		return lista.size();
 	}
 }

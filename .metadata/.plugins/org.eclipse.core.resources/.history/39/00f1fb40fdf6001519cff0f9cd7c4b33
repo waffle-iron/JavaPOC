@@ -4,13 +4,12 @@ import java.util.Date;
 public class Paciente {
 	private String nome;
 	private String rg;
-	private String dataNascimento;
+	private Date dataNascimento;
 	private String prontuario;
 	
-	Paciente(String nome, String rg, String dataNascimento){
+	Paciente(String nome, String rg, Date dataNascimento){
 		this.nome = nome;
 		this.rg = rg;
-		this.dataNascimento = dataNascimento;
 	}
 	
 	public String getNome(){
@@ -28,14 +27,11 @@ public class Paciente {
 		return this.rg;
 	}
 	
-	public String getData(){		
-		return dataNascimento;
-	}
 	public String toString(){
 		String mensagem = "";
 		mensagem += "Nome: " + getNome();
 		mensagem += "RG: " + getRg();
-		mensagem += "Data de Nascimento: " + getData();
+		mensagem += "Data de Nascimento: " + dataNascimento.toString();
 		return mensagem;
 	}
 }

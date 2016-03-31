@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+
+
+public class CadastroConsulta {
+	private ArrayList<Consulta> lista = new ArrayList();
+	
+	public void add(Consulta c){
+		lista.add(c);
+	}
+}
