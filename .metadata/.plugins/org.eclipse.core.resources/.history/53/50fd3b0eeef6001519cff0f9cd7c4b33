@@ -1,12 +1,9 @@
-import java.util.Date;
-
 
 public class Paciente {
 	private String nome;
 	private String rg;
-	private Date dataNascimento;
 	
-	Paciente(String nome, String rg, Date dataNascimento){
+	Paciente(String nome, String rg){
 		this.nome = nome;
 		this.rg = rg;
 	}
@@ -23,7 +20,7 @@ public class Paciente {
 		String mensagem = "";
 		mensagem += "Nome: " + getNome();
 		mensagem += "RG: " + getRg();
-		mensagem += "Data de Nascimento: " + dataNascimento.toString();
+		
 		return mensagem;
 	}
 }
