@@ -4,13 +4,24 @@ import java.util.Date;
 public class Consulta {
 	private Paciente paciente;
 	private Medicamento medicamento;
-	private Date dataConsulta;
+	private String dataConsulta;
+	private String hora;
 	
-	
-	Consulta(Paciente paciente, Medicamento medicamento, Date dataConsulta){
+	Consulta(Paciente paciente, Medicamento medicamento, String dataConsulta, String hora){
 		this.paciente = paciente;
 		this.medicamento = medicamento;
 		this.dataConsulta = dataConsulta;
+		this.hora = hora;
+	}
+	
+	public String getDia()
+	{
+		return dataConsulta;
+	}
+	
+	public String getHora()
+	{
+		return hora;
 	}
 	
 	public String toString(){
