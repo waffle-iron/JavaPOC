@@ -7,8 +7,9 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Menu m = new Menu();
-		//m.menuInicial();
+		Menu m = new Menu();
+		m.menuInicial();
+		
 		Date newdate = new Date();
 		SimpleDateFormat dateformat2 = new SimpleDateFormat("dd/M/yyy");
 				        String strdate2 = "04/10/1996";

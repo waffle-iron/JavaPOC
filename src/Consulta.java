@@ -24,6 +24,11 @@ public class Consulta {
 		return hora;
 	}
 	
+	public Paciente getPaciente()
+	{
+		return this.paciente;
+	}
+	
 	public String toString(){
 		String mensagem = "";
 		mensagem += "Dia: " + dataConsulta.toString();
