@@ -96,6 +96,7 @@ public class Menu {
 				System.out.println("Descrição inválida");
 			}
 			else{
+				System.out.println("Codigo: " + listaMedicamento.size());
 				listaMedicamento.add(new Medicamento(listaMedicamento.size(),nome,descricao));
 			}
 		}
@@ -120,9 +121,34 @@ public class Menu {
 			String m = listaConsulta.getConsultasDoDiaX(consultas);
 			System.out.println(m);
 			int op = teclado.nextInt();
-			System.out.println("Nome do Paciente: ");
-			String nomePaciente = teclado.next();
-			
+			//Verificar se está vago o horário
+			if(listaConsulta.podeCadastrarConsulta(op, consultas, dataConsulta.format(d)))
+			{
+				System.out.println("Nome do Paciente: ");
+				String nomePaciente = teclado.next();
+				boolean existe = listaPaciente.procuraPaciente(nomePaciente);
+				Paciente p = listaPaciente.getPaciente(nomePaciente);
+				if(existe)
+				{
+					//Medicamento
+					System.out.println("Código do Medicamento: ");
+					int codigoMedicamento = teclado.nextInt();
+					boolean medicamentoExiste = listaMedicamento.existMedicamento(codigoMedicamento);
+					if(medicamentoExiste)
+					{
+						Medicamento medicamento = listaMedicamento.getMedicamento(codigoMedicamento);
+						
+						System.out.println("Prontuário: ");
+						String prontuario = teclado.next();
+						listaConsulta.add(new Consulta(p, medicamento, dataConsulta.format(d), listaConsulta.getHoraConsulta(op) ));
+					}
+					
+				}
+				else{
+					System.out.println("Paciente não existe");
+				}
+			}
+		   
 		}		
 
 	}

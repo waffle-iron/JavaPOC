@@ -16,4 +16,32 @@ public class CadastraMedicamento {
 		}
 		
 	}
+	
+	public boolean existMedicamento(int codigo)
+	{
+		if(lista != null)
+		{
+			for(int i = 0; i < lista.size(); i++)
+			{
+				if(lista.get(i).getCodigo() == codigo)
+					return true;
+					
+			}
+		}
+		return false;
+	}
+	
+	public Medicamento getMedicamento(int codigo)
+	{
+		if(lista != null)
+		{
+			for(int i = 0; i < lista.size(); i++)
+			{
+				if(lista.get(i).getCodigo() == codigo)
+					return lista.get(i);
+			}
+		}
+		
+		return null;
+	}
 }

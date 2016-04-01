@@ -7,6 +7,10 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		CadastroPaciente l = new CadastroPaciente();
+		l.add(new Paciente("Rafael", "12123123", "04/10/1996"));
+		System.out.println(l.procuraPaciente("Rafael"));
 		Menu m = new Menu();
 		m.menuInicial();
 		

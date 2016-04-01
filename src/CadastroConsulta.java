@@ -113,10 +113,62 @@ public class CadastroConsulta {
 			msg += "13) 16:30 - \n";
 			msg += "14) 17:00 - \n";
 			msg += "15) 17:30 - \n";
-			msg += "16) 17:30 - \n";
+			msg += "16) 18:30 - \n";
 		}
 		return msg;
 	}
 	
+	public boolean podeCadastrarConsulta(int posicao, ArrayList<Consulta> l, String dia)
+	{
+		if(l != null)
+		{
+			if(l.get(posicao) == null)
+				return true;
+		}
+		if(l == null)
+			return true;
+		return false;
+	}
+	
+	public String getHoraConsulta(int op)
+	{
+		String msg = "";
+		if(op == 0)
+			msg += "08:00";
+		else if(op == 1)
+			msg += "08:30";
+		else if(op == 2)
+			msg += "09:00";
+		else if(op ==3)
+			msg += "09:30n";
+		else if(op ==4)
+			msg += "10:00";
+		else if(op == 5)
+			msg += "10:30";
+		else if(op == 6)
+			msg += "11:00";
+		else if(op == 7)
+			msg += "11:30";
+		else if(op == 8)
+			msg += "14:00";
+		else if(op == 9)
+			msg += "14:30";
+		else if(op == 10)
+			msg += "15:00";
+		else if(op == 11)
+			msg += "15:30";
+		else if(op == 12)
+			msg += "16:00 ";
+		else if(op == 13)
+			msg += "16:30";
+		else if(op == 14)
+			msg += "17:00";
+		else if(op == 15)
+			msg += "17:30";
+		else if(op == 16)
+			msg += "18:30";
+		
+		return msg;
+	}
 	
 }
