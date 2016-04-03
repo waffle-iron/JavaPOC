@@ -13,9 +13,10 @@ public class Menu {
 	private CadastroConsulta listaConsulta = new CadastroConsulta();
 	
 	public void menuInicial(){
-		String menu = "";
+		
 		int op = 0;
 		do{
+			String menu = "";
 			menu += "##### CONSULTÓRIO #####\n";
 			menu += "1 - Cadastrar Paciente\n";
 			menu += "2 - Cadastrar Medicamento\n";
