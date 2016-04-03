@@ -12,9 +12,11 @@ public class App {
 		CadastroPaciente l = new CadastroPaciente();
 		l.add(new Paciente("Rafael", "12123123", "04/10/1996"));
 		System.out.println(l.procuraPaciente("Rafael"));
-		Menu m = new Menu();
-		m.menuInicial();
 		
+		
+		Menu m = new Menu();
+		//m.menuInicial();
+		m.findPaciente();
 		Date newdate = new Date();
 		SimpleDateFormat dateformat2 = new SimpleDateFormat("dd/M/yyy");
 				        String strdate2 = "04/10/1996";

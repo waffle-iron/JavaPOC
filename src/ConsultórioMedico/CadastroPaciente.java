@@ -11,7 +11,7 @@ public class CadastroPaciente {
 	}
 	
 	public boolean procuraPaciente(String nome){
-		if(lista.size() > 0)
+		if(lista.size() >= 0)
 		{
 			for(int i = 0; i < lista.size(); i++)
 			{

@@ -119,17 +119,18 @@ public class Menu {
 			}catch(ParseException e){
 				e.printStackTrace();
 			}
-			 consultas = listaConsulta.getConsultasByDia(dataConsulta.format(d));
-			String m = listaConsulta.getConsultasDoDiaX(consultas);
-			System.out.println(m);
+			
+			consultas = listaConsulta.getConsultasByDia(dataConsulta.format(d));
+			String horariosDisponiveis = listaConsulta.getConsultasDoDiaX(consultas);
+			System.out.println(horariosDisponiveis);
 			int op = teclado.nextInt();
+			
 			//Verificar se está vago o horário
 			if(listaConsulta.podeCadastrarConsulta(op, consultas, dataConsulta.format(d)))
 			{
-				System.out.println("Nome do Paciente: ");
-				String nomePaciente = teclado.next();
-				boolean existe = listaPaciente.procuraPaciente(nomePaciente);
-				Paciente p = listaPaciente.getPaciente(nomePaciente);
+				//Verifica se o Paciente existe
+				boolean existe = findPaciente();
+				Paciente p = listaPaciente.getPaciente("Rafael");
 				if(existe)
 				{
 					//Medicamento
@@ -154,5 +155,18 @@ public class Menu {
 		}		
 
 	}
+	
+	public boolean findPaciente()
+	{
+
+		System.out.println("Nome do Paciente: ");
+		String nomePaciente = teclado.next();
+		System.out.println(nomePaciente.length());
+		boolean existe = listaPaciente.procuraPaciente(nomePaciente);
+		Paciente p = listaPaciente.getPaciente(nomePaciente);
+		System.out.println(listaPaciente.procuraPaciente(nomePaciente));
+		return existe;
+	}
+	
 	
 }
