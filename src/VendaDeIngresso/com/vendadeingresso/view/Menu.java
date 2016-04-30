@@ -22,7 +22,9 @@ public class Menu {
             op = teclado.nextInt();
             
             switch(op){
-                  
+            	case 1: 
+            			MenuFilme menuFilme = new MenuFilme();
+            			menuFilme.incio();
             }
             
         }while(op != 0);

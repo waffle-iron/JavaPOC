@@ -16,20 +16,20 @@ public class CadastrarFilme {
     
     public void cadastrar(){
         System.out.println("Informe um nome: ");
-        String nome = teclado.next();
+        String nome = teclado.nextLine();
         
         //Verifica se nome foi preenchido
         if(nome.length() > 0){
-            //Verifica se j√° existe um filme com esse nome
+            //Verifica se j· existe um filme com esse nome
             if(lista.existFilmeSearchByName(nome) == false){
                 
                 System.out.println("Informe um G√™nero: ");
-                String genero = teclado.next();
+                String genero = teclado.nextLine();
                 
                 //Verifica se foi preenchido
                 if(genero.length() > 0){
                     System.out.println("Informe uma Sinopse: ");                    
-                    String sinopse = teclado.next();
+                    String sinopse = teclado.nextLine();
                     
                     if(sinopse.length() > 0){
                         if(lista.add(new Filme(nome, genero, sinopse)))
@@ -37,16 +37,16 @@ public class CadastrarFilme {
                     }
                 }
                 else{
-                    System.out.println("G√™nero n√£o pode ser vazio.");
+                    System.out.println("GÍnero n„o pode ser vazio.");
                 }
             }
             else
             {
-                System.out.println("Filme j√° cadastrado.");
+                System.out.println("Filme j· cadastrado.");
             }
         }
         else{
-            System.out.println("Nome n√£o pode ser vazio.");
+            System.out.println("Nome n„o pode ser vazio.");
         }
     }
 }
