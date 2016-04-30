@@ -14,7 +14,7 @@ public class NumerosTeste {
 		numero = new Numeros();
 	}
 	@Test
-	public void testNumeroPar() {
+	public void ShouldBeAbleToBePar() {
 		assertTrue(numero.numeroPar(8));
 	}
 
